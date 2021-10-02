@@ -1,0 +1,5 @@
+function frame(elem){
+  var move++;
+  elem=move+"px";
+}
+setInterval(frame, 2000);
