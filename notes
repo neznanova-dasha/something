@@ -1,5 +1,13 @@
-function frame(elem){
-  var move++;
-  elem=move+"px";
+function move(elem){
+    let margin=-100;
+    function frame(){
+    if(margin == 0){
+        clearInterval(time);
+    }
+    else{
+        margin+=5;
+        elem.style.marginRight = margin + "%";
+    }
+    }
+    let time = setInterval(frame, 15);
 }
-setInterval(frame, 2000);
